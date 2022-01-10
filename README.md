@@ -9,11 +9,13 @@ an application on the college timetable will be appropriate for making things in
 
 This project process includes two admin and user level, where admin is able to modify the data, and user is able to view the time table.
 admin accsess will be given to teachers who can be able to modify the timetables based on the years of student.
-sampleimages
+
 
 Functionality & Concepts used :
 
 The App has a very simple and interactive interface which helps the students and teachers select their year of study( 1st, 2nd, 3rd, and 4th years). 
+
+**sampleimages**
 
 <img width="810" src=https://github.com/preetham-1601/FoodRunner1/blob/main/screenshots.png>
 

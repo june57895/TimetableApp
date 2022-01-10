@@ -2,13 +2,13 @@
 
 *Problem Statement:*
 
-As timing and time table are more importent in our life to be punctual enough to do our works, saving images and serching for them is time consuming,
+As timing and time table are more important in our life to be punctual enough to do our works, saving images and searching for them is time consuming,
 an application on the college timetable will be appropriate for making things in the bound of time.
 
 *Proposed Solution :*
 
 This project process includes two admin and user level, where admin is able to modify the data, and user is able to view the time table.
-admin accsess will be given to teachers who can be able to modify the timetables based on the years of student.
+admin access will be given to teachers who can be able to modify the timetables based on the years of student.
 
 
 Functionality & Concepts used :

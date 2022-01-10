@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.timetableapp.fragment.StartFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startFragment_to_subjectFragment"
+            app:destination="@id/subjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.example.timetableapp.fragment.StartFragment"
+        android:label="admin access"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_adminFragment_to_subjectFragment"
+            app:destination="@id/subjectFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.timetableapp.fragment.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_startFragment"
+            app:destination="@id/startFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectFragment"
+        android:name="com.example.timetableapp.fragment.SubjectFragment"
+        android:label="Timetable"
+        tools:layout="@layout/fragment_subject">
+        <action
+            android:id="@+id/action_subjectFragment_to_subjectDetailFragment"
+            app:destination="@id/subjectDetailFragment" />
+        <action
+            android:id="@+id/action_subjectFragment_to_addSubjectFragment"
+            app:destination="@id/addSubjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectDetailFragment"
+        android:name="com.example.timetableapp.fragment.SubjectDetailFragment"
+        android:label="@string/subject_detail_fragment_title"
+        tools:layout="@layout/fragment_subject_detail">
+        <argument
+            android:name="subject_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_subjectDetailFragment_to_addSubjectFragment"
+            app:destination="@id/addSubjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addSubjectFragment"
+        android:name="com.example.timetableapp.fragment.AddSubjectFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_add_subject">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="subject_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addSubjectFragment_to_subjectFragment"
+            app:destination="@id/subjectFragment"
+            app:popUpTo="@id/subjectFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
